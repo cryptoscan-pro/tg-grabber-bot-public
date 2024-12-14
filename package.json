@@ -1,0 +1,59 @@
+{
+  "name": "telegram-grabber-bot",
+  "version": "1.0.0",
+  "description": "A Telegram bot for managing multiple accounts and scraping data from Telegram channels.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "dev": "ts-node-dev src/index.ts",
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "docker:build": "docker build -t telegram-grabber-bot .",
+    "docker:run": "docker run -d --env-file .env telegram-grabber-bot",
+    "docker:stop": "docker stop telegram-grabber-bot",
+    "docker:remove": "docker rm telegram-grabber-bot",
+    "docker:clean": "docker rmi telegram-grabber-bot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/tg-grabber-bot.git"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "scraper",
+    "telegram-bot",
+    "typescript",
+    "docker",
+    "cryptoscan"
+  ],
+  "author": "Cryptoscan Pro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/your-username/tg-grabber-bot/issues"
+  },
+  "homepage": "https://github.com/your-username/tg-grabber-bot#readme",
+  "dependencies": {
+    "gramjs": "^1.10.0",
+    "dotenv": "^16.0.0",
+    "winston": "^3.8.0",
+    "bunyan": "^1.8.15"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
